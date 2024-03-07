@@ -62,7 +62,7 @@ skipTest(
       black: 4,
     }}, 'purple')).isEqualTo(8);
 
-    stock = {
+    const stock = {
       balloons: {
         purple: 3, 
         green: 1,
@@ -83,7 +83,7 @@ skipTest(
         silver: 13
       }
     }
-    check(partyPropCheck({stock}, 'green')).isEqualTo(23);
+    check(partyPropCheck(stock, 'green')).isEqualTo(23);
   }
 );
 
