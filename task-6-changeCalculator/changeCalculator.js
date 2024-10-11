@@ -1,10 +1,10 @@
 const { check, runTest, skipTest } = require("../test-api/index.js");
 
-function changeCalculator() {
-
-}
+function changeCalculator() {}
 
 runTest(
-  "descriptive description",
-  // ... call your function here
+	"change this to describe the behaviour you are testing in this block",
+	function () {
+		// ...add check() assertions here
+	}
 );
