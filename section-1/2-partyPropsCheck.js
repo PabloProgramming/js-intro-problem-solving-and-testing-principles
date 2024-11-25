@@ -9,22 +9,22 @@ function partyPropCheck(stock, colour) {
 }
 
 runTest("counts the props when only one item is in stock", function () {
-	check(
-		partyPropCheck(
-			{
-				balloons: {
-					purple: 3,
-				},
-			},
-			"purple"
-		)
-	).isEqualTo(3);
-	// add more check() assertions here
+	// Arrange
+	const stock = {
+		balloons: {
+			purple: 3,
+		},
+	}
+
+	// Act
+	const result = partyPropCheck( stock, "purple" )
+	
+	// Assert
+	check(result).isEqualTo(3);
 });
 
 skipTest(
-	"change this to describe the behaviour you are testing in this block",
-	function () {
+	"change this to describe the behaviour you are testing in this block", function () {
 		// ...add check() assertions here
 	}
 );

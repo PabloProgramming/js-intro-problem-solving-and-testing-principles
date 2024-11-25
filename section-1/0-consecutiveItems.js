@@ -10,15 +10,35 @@ It is guaranteed that a and b are both present in arr.
 }
 
 runTest("returns true when the given numbers are consecutive", function () {
-	check(consecutiveItems([1, 2, 3, 4], 1, 2)).isEqualTo(true);
-	// add more check() assertions here
+	// Arrange
+	const numsToCheck = [1, 2]
+
+	// Act
+	const result = consecutiveItems(numsToCheck, 1, 2)
+
+	// Assert
+	check(result).isEqualTo(true);
 });
 
-skipTest(
-	"change this to describe the behaviour you are testing in this block",
-	function () {
-		// ...add check() assertions here
-	}
-);
+runTest("returns true when the given numbers are consecutive for a larger array", function () {
+	// Arrange
+	const numsToCheck = [5, 2, 3, 12]
+
+	// Act
+	const result = consecutiveItems(numsToCheck, 2, 3)
+
+	// Assert
+	check(result).isEqualTo(true);
+});
+
+// populate the different steps for the next condition
+skipTest("returns false when the given numbers are not consecutive", function () {
+	// Arrange
+
+	// Act
+
+	// Assert
+});
+
 
 // ...and add more test blocks down here!

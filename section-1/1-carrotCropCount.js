@@ -9,13 +9,18 @@ function carrotCropCount(gardenPatch) {
 }
 
 runTest("counts the carrots when there are only carrots present", function () {
-	check(carrotCropCount([["carrot"]])).isEqualTo(1);
-	// add more check() assertions here
+	// Arrange
+	const garden = ["carrot"]
+
+	// Act
+	const count = carrotCropCount(garden)
+
+	// Assert
+	check(count).isEqualTo(1);
 });
 
 skipTest(
-	"change this to describe the behaviour you are testing in this block",
-	function () {
+	"change this to describe the behaviour you are testing in this block", function () {
 		// ...add check() assertions here
 	}
 );
