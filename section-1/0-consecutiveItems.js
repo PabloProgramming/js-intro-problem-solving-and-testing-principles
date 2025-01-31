@@ -9,7 +9,7 @@ It is guaranteed that a and b are both present in arr.
 */
 for (let i =0; i < integers.length; i++)
 	{
-		if(integers[i] === a&& integers[i+1] ===b)
+		if (integers[i] === a && integers[i+1] === b)
 			return true
 	}
 	return false
