@@ -1,51 +1,32 @@
 const { check, runTest, skipTest } = require("../test-api/index.js");
 
 function calculateJump(locations, jumpLength) {
-	/*
-  You will be given an array containing string representations of the locations of a cat and a mouse. The array may also contains walls represented by "W".
-  You will also be given a positive integer which represents how far the cat can jump.
 
-  Your task is to calculate if the cat can jump far enough to catch the mouse. 
+  let catIndex = locations.indexOf("cat");
+  let mouseIndex = locations.indexOf("mouse");
 
-  Each space "x" expends 1 of the cat's movement, and each wall "W" expends 2. 
-  It does not matter if the cat is before or after the mouse in the array.
-
-  E.g. 
-    calculateJump(["cat", "W", "mouse"], 5)
-    // => true
-  */
-
-    let catIndex = locations.indexOf('cat');
-    let mouseIndex = locations.indexOf('mouse');
-    let extraJump = 0
+    let extraJump = 0;
       
-      for(let i = 0; i <locations.length; i++)
-        {
-            if(location[i] === 'W' )
-              {
-                extraJump++
-              }
+      for (let i = 0; i <locations.length; i++){
+            
+        if (locations[i] === 'W' ) {
+                extraJump++;
         }
-console.log(extraJump, "<<looooooogggg")
+      }
 
-      let difference = catIndex - mouseIndex
+  let difference = catIndex - mouseIndex;
   
-        if (difference < 0) {
-        difference = - difference;
-        }
+    if (difference < 0) {
+      difference = - difference;
+    }
         
-        const jumpDist = difference + extraJump
-
-        
-      console.log(catIndex, mouseIndex, jumpLength, difference,"<< logggggggg")
+    const jumpDist = difference + extraJump
   
-      return jumpLength >= jumpDist ? true :false;
-
+  return jumpLength >= jumpDist ? true :false;
 
 }
 
-runTest(
-	"when jumpLength is 0", function () {
+runTest("when jumpLength is 0", function () {
 
   //Arrange
   const locations = ["x", "x", "cat", "x", "x", "x", "mouse"];

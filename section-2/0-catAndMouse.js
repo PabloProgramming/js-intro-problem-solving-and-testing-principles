@@ -31,14 +31,11 @@ function calculateJump(locations, jumpLength) {
       difference = - difference;
       }
 
-    console.log(catIndex, mouseIndex, jumpLength, difference,"<< logggggggg")
-
     return jumpLength >= difference ? true :false;
 }
 
 
 runTest("when jumpLength is 0", function () {
-
     //Arrange
     const locations = ["x", "x", "cat", "x", "x", "x", "mouse"];
     //Act
@@ -49,7 +46,6 @@ runTest("when jumpLength is 0", function () {
 );
 
 runTest("when jumpLength is less than the distance between the cat and the mouse", function () {
-
   //Arrange
   const locations = ["x", "x", "cat", "x", "x", "x", "mouse"];
   //Act
@@ -60,7 +56,6 @@ runTest("when jumpLength is less than the distance between the cat and the mouse
 );
 
 runTest("when jumpLength is isEqualTo than the distance between the cat and the mouse", function () {
-
   //Arrange
   const locations = ["x", "x", "cat", "x", "x", "x", "mouse"];
   //Act
@@ -71,7 +66,6 @@ runTest("when jumpLength is isEqualTo than the distance between the cat and the 
 );
 
 runTest("when jumpLength is greater than the distance between the cat and the mouse", function () {
-
   //Arrange
   const locations = ["x", "x", "cat", "x", "x", "x", "mouse"];
   //Act
@@ -81,9 +75,7 @@ runTest("when jumpLength is greater than the distance between the cat and the mo
 }
 );
 
-
 runTest("when jumpLength is greater than the distance between the cat and the mouse", function () {
-
   //Arrange
   const locations = ["mouse", "x", "x", "x", "x", "cat", ];
   //Act
